@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{88864902-00CE-4236-B768-D7B8CA6A4D82}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ugine</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../lib/openal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw.win32.lib;opengl32.lib;OpenAL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib;../lib/openal</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../lib/openal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw.win32.lib;opengl32.lib;OpenAL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib;../lib/openal</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\affector.h" />
+    <ClInclude Include="..\include\AppState.h" />
+    <ClInclude Include="..\include\array.h" />
+    <ClInclude Include="..\include\audiobuffer.h" />
+    <ClInclude Include="..\include\audioengine.h" />
+    <ClInclude Include="..\include\audiolistener.h" />
+    <ClInclude Include="..\include\audiosource.h" />
+    <ClInclude Include="..\include\audiostream.h" />
+    <ClInclude Include="..\include\bone.h" />
+    <ClInclude Include="..\include\bonedata.h" />
+    <ClInclude Include="..\include\checkbutton.h" />
+    <ClInclude Include="..\include\collisioncomponent.h" />
+    <ClInclude Include="..\include\enemyIA.h" />
+    <ClInclude Include="..\include\enemystatedodging.h" />
+    <ClInclude Include="..\include\EnemyStateMoving.h" />
+    <ClInclude Include="..\include\enemystates.h" />
+    <ClInclude Include="..\include\enemystateshooting.h" />
+    <ClInclude Include="..\include\fighterstatemoving.h" />
+    <ClInclude Include="..\include\fighterstatechasing.h" />
+    <ClInclude Include="..\include\IAFighters.h" />
+    <ClInclude Include="..\include\istate.h" />
+    <ClInclude Include="..\include\statemachine.h" />
+    <ClInclude Include="..\include\stats.h" />
+    <ClInclude Include="..\include\traction.h" />
+    <ClInclude Include="..\include\weapon1movement.h" />
+    <ClInclude Include="..\include\button.h" />
+    <ClInclude Include="..\include\camera.h" />
+    <ClInclude Include="..\include\circlecollision.h" />
+    <ClInclude Include="..\include\collision.h" />
+    <ClInclude Include="..\include\collisionmanager.h" />
+    <ClInclude Include="..\include\collisionpixeldata.h" />
+    <ClInclude Include="..\include\component.h" />
+    <ClInclude Include="..\include\componenttypes.h" />
+    <ClInclude Include="..\include\control.h" />
+    <ClInclude Include="..\include\controladorraton.h" />
+    <ClInclude Include="..\include\controladorteclado.h" />
+    <ClInclude Include="..\include\controller.h" />
+    <ClInclude Include="..\include\emitter.h" />
+    <ClInclude Include="..\include\entitiesid.h" />
+    <ClInclude Include="..\include\entity.h" />
+    <ClInclude Include="..\include\entityFactory.h" />
+    <ClInclude Include="..\include\eventsconstants.h" />
+    <ClInclude Include="..\include\file.h" />
+    <ClInclude Include="..\include\font.h" />
+    <ClInclude Include="..\include\frame.h" />
+    <ClInclude Include="..\include\game.h" />
+    <ClInclude Include="..\include\gesturemanager.h" />
+    <ClInclude Include="..\include\glinclude.h" />
+    <ClInclude Include="..\include\globales.h" />
+    <ClInclude Include="..\include\guimanager.h" />
+    <ClInclude Include="..\include\igestor.h" />
+    <ClInclude Include="..\include\image.h" />
+    <ClInclude Include="..\include\inputmanager.h" />
+    <ClInclude Include="..\include\map.h" />
+    <ClInclude Include="..\include\mapscene.h" />
+    <ClInclude Include="..\include\math.h" />
+    <ClInclude Include="..\include\iobserver.h" />
+    <ClInclude Include="..\include\message.h" />
+    <ClInclude Include="..\include\parallaxScene.h" />
+    <ClInclude Include="..\include\particle.h" />
+    <ClInclude Include="..\include\pixelcollision.h" />
+    <ClInclude Include="..\include\rectcollision.h" />
+    <ClInclude Include="..\include\render.h" />
+    <ClInclude Include="..\include\renderer.h" />
+    <ClInclude Include="..\include\resourcemanager.h" />
+    <ClInclude Include="..\include\SA_GameOver.h" />
+    <ClInclude Include="..\include\SA_Menu.h" />
+    <ClInclude Include="..\include\SA_Options.h" />
+    <ClInclude Include="..\include\SA_Playing.h" />
+    <ClInclude Include="..\include\scene.h" />
+    <ClInclude Include="..\include\screen.h" />
+    <ClInclude Include="..\include\skeletondata.h" />
+    <ClInclude Include="..\include\skeletonsprite.h" />
+    <ClInclude Include="..\include\slider.h" />
+    <ClInclude Include="..\include\sprite.h" />
+    <ClInclude Include="..\include\string.h" />
+    <ClInclude Include="..\include\types.h" />
+    <ClInclude Include="..\include\u-gine.h" />
+    <ClInclude Include="..\include\weapons.h" />
+    <ClInclude Include="..\include\world.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\stb_image.c" />
+    <ClCompile Include="..\lib\stb_vorbis.c" />
+    <ClCompile Include="..\src\audiobuffer.cpp" />
+    <ClCompile Include="..\src\audioengine.cpp" />
+    <ClCompile Include="..\src\audiolistener.cpp" />
+    <ClCompile Include="..\src\audiosource.cpp" />
+    <ClCompile Include="..\src\audiostream.cpp" />
+    <ClCompile Include="..\src\bone.cpp" />
+    <ClCompile Include="..\src\checkbutton.cpp" />
+    <ClCompile Include="..\src\collisioncomponent.cpp" />
+    <ClCompile Include="..\src\enemyIA.cpp" />
+    <ClCompile Include="..\src\enemystataedodging.cpp" />
+    <ClCompile Include="..\src\EnemyStateMoving.cpp" />
+    <ClCompile Include="..\src\enemystateshooting.cpp" />
+    <ClCompile Include="..\src\fighterstatechasing.cpp" />
+    <ClCompile Include="..\src\fighterstatemoving.cpp" />
+    <ClCompile Include="..\src\IAFigthters.cpp" />
+    <ClCompile Include="..\src\statemachine.cpp" />
+    <ClCompile Include="..\src\stats.cpp" />
+    <ClCompile Include="..\src\traction.cpp" />
+    <ClCompile Include="..\src\weapon1movement.cpp" />
+    <ClCompile Include="..\src\button.cpp" />
+    <ClCompile Include="..\src\camera.cpp" />
+    <ClCompile Include="..\src\collisionmanager.cpp" />
+    <ClCompile Include="..\src\controladorraton.cpp" />
+    <ClCompile Include="..\src\controladorteclado.cpp" />
+    <ClCompile Include="..\src\controller.cpp" />
+    <ClCompile Include="..\src\emitter.cpp" />
+    <ClCompile Include="..\src\entity.cpp" />
+    <ClCompile Include="..\src\entityFactory.cpp" />
+    <ClCompile Include="..\src\font.cpp" />
+    <ClCompile Include="..\src\game.cpp" />
+    <ClCompile Include="..\src\gesturemanager.cpp" />
+    <ClCompile Include="..\src\guimanager.cpp" />
+    <ClCompile Include="..\src\image.cpp" />
+    <ClCompile Include="..\src\inputmanager.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\map.cpp" />
+    <ClCompile Include="..\src\mapscene.cpp" />
+    <ClCompile Include="..\src\math.cpp" />
+    <ClCompile Include="..\src\parallaxScene.cpp" />
+    <ClCompile Include="..\src\particle.cpp" />
+    <ClCompile Include="..\src\render.cpp" />
+    <ClCompile Include="..\src\renderer.cpp" />
+    <ClCompile Include="..\src\resourcemanager.cpp" />
+    <ClCompile Include="..\src\SA_GameOver.cpp" />
+    <ClCompile Include="..\src\SA_Menu.cpp" />
+    <ClCompile Include="..\src\SA_Options.cpp" />
+    <ClCompile Include="..\src\SA_Playing.cpp" />
+    <ClCompile Include="..\src\scene.cpp" />
+    <ClCompile Include="..\src\screen.cpp" />
+    <ClCompile Include="..\src\skeletondata.cpp" />
+    <ClCompile Include="..\src\skeletonsprite.cpp" />
+    <ClCompile Include="..\src\slider.cpp" />
+    <ClCompile Include="..\src\sprite.cpp" />
+    <ClCompile Include="..\src\weapons.cpp" />
+    <ClCompile Include="..\src\world.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

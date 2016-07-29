@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<entities>
+	
+	<player1>
+		<controller up = "87" down = "83" rotleft = "65" rotright = "68" fire1 = "32" fire2 = "81" /> 	<!-- ASCII keys -->
+	</player1>
+	
+	<player2>
+		<controller up = "30" down = "31" rotleft = "28" rotright = "29" fire1 = "13" fire2 = "15" /> 	<!-- ASCII keys -->
+	</player2>
+	
+	<enemy>
+		<ia/>
+	</enemy>
+	
+	<dreadnought>
+		<components>
+			<render imagedir = "data/Dreadnought.png" explosiondir = "data/explosion.png" explosionsound = "data/ExplosionSound.wav" posx = "400" posy = "200" angle = "0" scale = "0.5"/>
+			<stats life = "100" rotationspeed = "60" linearspeed = "60" energy = "80 " />
+			<collision/>
+			<weapons>
+				<weapon1 name = "dreadnoughtshot1" energy = "30" delay = "2" vel = "150" sound = "data/DreadnoughtShot1Sound.wav"/>
+				<weapon2 name = "dreadnoughtshot2" energy = "50" delay = "4" vel = "100" sound = "data/DreadnoughtShot2Sound.wav"/>
+			</weapons>
+		</components>
+   </dreadnought>
+   
+   	<dreadnoughtshot1>
+		<components>
+			<render imagedir = "data/DreadnoughtShot1.png" posx = "" posy = "" angle = "" scale = "1"/>
+			<weapon1movement/>
+			<collision/>
+		</components>
+   </dreadnoughtshot1>
+   
+   <dreadnoughtshot2>
+		<components>
+			<render imagedir = "data/DreadnoughtShot2.png" posx = "" posy = "" angle = "" scale = "0.5"/>
+			<iafighters/>
+		</components>
+   </dreadnoughtshot2>
+
+   <avatar>
+		<components>
+			<render imagedir = "data/Avatar.png" explosiondir = "data/explosion.png" explosionsound = "data/ExplosionSound.wav" posx = "200" posy = "400" angle = "0" scale = "0.5"/>
+			<stats life = "100" rotationspeed = "80" linearspeed = "80" energy = "100 " />
+			<collision/>
+			<weapons>
+				<weapon1 name = "avatarshot1"  energy = "30" delay = "2" vel = "150" sound = "data/DreadnoughtShot1Sound.wav"/>
+				<weapon2 name = "avatartractor"  energy = "30" delay = "2" vel = "150" sound = "data/TractorSound.wav"/>
+			</weapons>
+		</components>
+   </avatar>
+   
+   	<avatarshot1>
+		<components>
+			<render imagedir = "data/AvatarShot1.png" posx = "" posy = "" angle = "" scale = "0.5"/>
+			<collision/>
+			<weapon1movement/>
+		</components>
+   </avatarshot1>
+   
+    <avatartractor>
+		<components>
+			<traction/>
+		</components>
+   </avatartractor>
+ </entities>
